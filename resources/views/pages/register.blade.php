@@ -9,7 +9,7 @@
   <div class="mb-4"><input type="text" name="email" placeholder="Email" class="border border-black p-2" /></div>
   <div class="mb-4"><input type="password" name="password" placeholder="Password" class="border border-black p-2" /></div>
   <div class="mb-4"><input type="password" name="password_confirmation" placeholder="Confirm Password" class="border border-black p-2" /></div>
-  <button type="submit" class="border border-black px-4 py-2 rounded">Submit</button>
+  <button type="submit" class="border border-black px-4 py-2 rounded cursor-pointer">Submit</button>
 </form>
 
 @if ($errors->any())

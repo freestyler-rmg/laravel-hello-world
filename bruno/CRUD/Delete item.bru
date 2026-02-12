@@ -1,0 +1,16 @@
+meta {
+  name: Delete item
+  type: http
+  seq: 2
+}
+
+delete {
+  url: http://localhost:8000/api/test-crud/5
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

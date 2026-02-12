@@ -11,12 +11,22 @@
   <div class="mb-4">
     <input type="password" name="password" placeholder="Password" class="border border-black p-2" />
   </div>
-  <button type="submit" class="border border-black px-4 py-2 rounded">Login</button>
+  <button type="submit" class="border border-black px-4 py-2 rounded cursor-pointer">Login</button>
 </form>
+
+<div class="mb-4">
+  <a href="{{ route('forgotPassword.index') }}" class="text-white bg-gray-700 rounded px-4 py-2 inline-block">Forgot Password</a>
+</div>
 
 @if ($errors->any())
 <div class="mb-4 text-red-600">
   {{ $errors->first() }}
+</div>
+@endif
+
+@if (session('success'))
+<div class="mb-4 text-green-600">
+  {{ session('success') }}
 </div>
 @endif
 

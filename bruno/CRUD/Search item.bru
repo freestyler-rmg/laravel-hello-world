@@ -1,0 +1,22 @@
+meta {
+  name: Search item
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8000/api/test-crud/search
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "search": "test"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

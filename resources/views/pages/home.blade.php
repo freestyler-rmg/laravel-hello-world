@@ -13,7 +13,7 @@
 
 @if (auth()->check())
 <div class="mb-4">
-  You are logged in as: {{ auth()->user()->name }}
+  You are logged in as: <span class="font-semibold">{{ auth()->user()->name }}</span>
 </div>
 @else
 <div class="mb-4">
@@ -27,10 +27,13 @@
 @endif
 
 <div class="mb-4">
-  <a href="{{ route('testCrud.index') }}" class="text-blue-600 border border-blue-700 rounded px-4 py-2">Test CRUD Page</a>
+  <a href="{{ route('testCrud.index') }}" class="text-blue-600 border border-blue-700 rounded px-4 py-2 inline-block">Test CRUD Page</a>
 </div>
 
-@if (!auth())
+@if (auth()->check())
+<div class="mb-4">
+  <a href="{{ route('resetPassword.index') }}" class="text-white bg-gray-700 rounded px-4 py-2 inline-block">Reset Password</a>
+</div>
 <div>
   <form action="{{ route('logout') }}" method="POST">
     @csrf

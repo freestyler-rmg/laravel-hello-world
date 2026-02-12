@@ -22,3 +22,9 @@ Route::get('/login', [HomeController::class, 'login'])->name('login.index');
 Route::post('/login', [HomeController::class, 'loginPost'])->name('login.post');
 
 Route::post('/logout', [HomeController::class, 'logout'])->name('logout');
+
+Route::get('/forgot-password', [HomeController::class, 'forgotPassword'])->name('forgotPassword.index');
+Route::post('/forgot-password', [HomeController::class, 'forgotPasswordPost'])->name('forgotPassword.post');
+
+Route::get('/reset-password', [HomeController::class, 'resetPassword'])->name('resetPassword.index');
+Route::post('/reset-password', [HomeController::class, 'resetPasswordPost'])->name('resetPassword.post');

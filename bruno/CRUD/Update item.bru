@@ -1,0 +1,22 @@
+meta {
+  name: Update item
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8000/api/test-crud/7
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "hohoho"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

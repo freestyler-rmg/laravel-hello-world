@@ -1,0 +1,22 @@
+meta {
+  name: Store item
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/test-crud
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "12341234123421341234"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
